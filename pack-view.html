@@ -1,20 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZA.AEX Pack Final</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+export default function ZaaexPack() {
+  return (
+    <div className="p-6 text-white">
+      <img src="/images/pack2.jpeg" alt="Pack Image" className="rounded-lg mb-4" />
 
-<header>
-    <h1>za.aex CC PACK!</h1>
-</header>
+      <h1 className="text-3xl font-bold mb-4">za.aex CC PACK!</h1>
 
-<img src="images/pack-final.png" class="big-img">
+      <img src="/images/pack3.jpeg" alt="Preview Image" className="rounded-lg mb-6" />
 
-<a class="green-btn" href="#">Download</a>
-
-</body>
-</html>
+      <a
+        href="/download/zaaex-pack.zip"
+        className="bg-green-600 px-5 py-2 rounded-md font-semibold hover:bg-green-700"
+      >
+        Download
+      </a>
+    </div>
+  );
+}
