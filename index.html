@@ -1,34 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SkullFX - AE Presets</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SkullFX | 100% Free After Effects Presets</title>
+  <meta name="description" content="Free premium After Effects presets - Symbiote, Agony, Velocity, Text Animation, Shake & more."/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    :root {
+      --bg: #0b1320;
+      --card: #16213e;
+      --accent: #00d4ff;
+      --text: #e0fbfc;
+      --hover: #1e40af;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+    header {
+      text-align:center;
+      padding: 100px 20px 80px;
+      background: linear-gradient(135deg, #0f3460, #16213e);
+    }
+    header img {
+      max-width: 180px;
+      margin-bottom: 20px;
+    }
+    h1 { font-size: 3.5rem; margin-bottom:16px; }
+    .lead { font-size:1.4rem; max-width:900px; margin:0 auto 40px; opacity:0.9; }
+    .container { max-width:1300px; margin:0 auto; padding:0 20px; }
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      padding: 40px 0 100px;
+    }
+    .cat {
+      background: var(--card);
+      border-radius: 16px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: all 0.4s;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    .cat:hover {
+      transform: translateY(-15px);
+      box-shadow: 0 25px 50px rgba(0,212,255,0.2);
+    }
+    .cat img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+    .info {
+      padding: 24px;
+      text-align: center;
+    }
+    .info h3 {
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+    }
+    .price {
+      font-size: 2rem;
+      color: #00ff9d;
+      font-weight: bold;
+    }
+    .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px,1fr)); gap:30px; padding:60px 0; }
+    .preset {
+      background:var(--card);
+      border-radius:16px;
+      overflow:hidden;
+      text-align:center;
+    }
+    .preset img { width:100%; height:240px; object-fit:cover; }
+    .preset h4 { padding:20px 20px 10px; font-size:1.4rem; }
+    .dl {
+      display:inline-block;
+      margin:15px;
+      padding:14px 40px;
+      background:#00ff9d;
+      color:#000;
+      border-radius:50px;
+      text-decoration:none;
+      font-weight:bold;
+    }
+    .dl:hover { background:#00cc7a; }
+    footer {
+      text-align:center;
+      padding:50px;
+      background:#080f1a;
+      font-size:0.9rem;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header>
-    <h1>SkullFX AE Presets</h1>
-    <input type="text" id="search" placeholder="Search presets...">
-</header>
+  <header>
+    <div class="container">
+      <!-- Put your logo here (you already have logo.png in the repo) -->
+      <img src="logo.png" alt="SkullFX Logo">
+      <h1>SkullFX</h1>
+      <p class="lead">100% FREE premium After Effects presets & packs.<br>Symbiote, Agony, Velocity, Aesthetic, Text Animation and more.</p>
+    </div>
+  </header>
 
-<h2 class="section-title">Preset Categories</h2>
+  <div class="container">
+    <div class="categories" id="cats"></div>
+  </div>
 
-<div id="sections" class="section-container">
-    <a class="section-card" href="packs.html">Packs</a>
-    <div class="section-card">Velocity</div>
-    <div class="section-card">Jugg</div>
-    <div class="section-card">Glow</div>
-    <div class="section-card">Text Animation</div>
-    <div class="section-card">Soft Style</div>
-    <div class="section-card">Shake</div>
-    <div class="section-card">Aesthetic</div>
-    <div class="section-card">Symbiote</div>
-    <div class="section-card">Agony</div>
-    <div class="section-card">CC</div>
-</div>
+  <div class="container" id="single" style="display:none;">
+    <h2 id="title" style="text-align:center; margin:60px 0; font-size:3rem;"></h2>
+    <div class="gallery" id="gallery"></div>
+    <p style="text-align:center; margin:60px 0;">
+      <a href="#" onclick="history.back()" style="color:var(--accent); font-size:1.2rem;">Back to all categories</a>
+    </p>
+  </div>
 
-<script src="script.js"></script>
+  <footer>
+    © 2025 SkullFX • All presets are completely free • Compatible with After Effects 2020+
+  </footer>
+
+  <script>
+    const data = [
+      {name:"Symbiote",       img:"preset1.jpg",  presets:[
+        {n:"Symbiote Venom Transition", i:"preset1.jpg", f:"https://drive.google.com/uc?export=download&id=YOUR_FILE_ID"},
+        {n:"Symbiote Web Swing",        i:"preset2.jpg", f:"https://drive.google.com/uc?export=download&id=YOUR_FILE_ID"},
+      ]},
+      {name:"Agony",          img:"preset3.jpg",  presets:[]},
+      {name:"Jugg",           img:"preset1.jpg",  presets:[]},
+      {name:"Velocity",       img:"preset2.jpg",  presets:[]},
+      {name:"Aesthetic",      img:"preset3.jpg",  presets:[]},
+      {name:"Text Animation", img:"preset1.jpg",  presets:[]},
+      {name:"Soft Style",     img:"preset2.jpg",  presets:[]},
+      {name:"CC",             img:"preset3.jpg",  presets:[]},
+      {name:"Shake",          img:"preset1.jpg",  presets:[]},
+    ];
+
+    const grid = document.getElementById('cats');
+    data.forEach(c => {
+      const div = document.createElement('div');
+      div.className = 'cat';
+      div.innerHTML = `
+        <img src="\( {c.img}" alt=" \){c.name}">
+        <div class="info">
+          <h3>${c.name}</h3>
+          <div class="price">FREE</div>
+        </div>
+      `;
+      div.onclick = () => openCat(c);
+      grid.appendChild(div);
+    });
+
+    function openCat(cat) {
+      document.querySelector('.categories').parentElement.style.display='none';
+      document.getElementById('single').style.display='block';
+      document.getElementById('title').textContent = cat.name + " Presets";
+      const g = document.getElementById('gallery');
+      g.innerHTML = '';
+      if (cat.presets.length === 0) {
+        g.innerHTML = `<p style="grid-column:1/-1;text-align:center;font-size:1.5rem;opacity:0.7;">Coming very soon!</p>`;
+      } else {
+        cat.presets.forEach(p => {
+          g.innerHTML += `
+            <div class="preset">
+              <img src="\( {p.i}" alt=" \){p.n}">
+              <h4>${p.n}</h4>
+              <p class="price">FREE</p>
+              <a href="${p.f}" class="dl">Download Now</a>
+            </div>
+          `;
+        });
+      }
+      window.scrollTo(0,0);
+    }
+  </script>
 </body>
 </html>
