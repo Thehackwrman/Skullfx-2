@@ -1,31 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZA.AEX Pack</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+export default function Packs() {
+  return (
+    <div className="p-6 text-white">
+      <h1 className="text-3xl font-bold mb-6">Packs</h1>
 
-<header>
-    <h1>ZA.AEX CC Pack</h1>
-</header>
+      <div className="bg-[#111] p-4 rounded-lg">
+        <img src="/images/pack1.jpeg" alt="Pack Preview" className="rounded-lg mb-4" />
 
-<img src="images/pack-open.png" class="big-img">
+        <h2 className="text-xl font-bold mb-2">ZA.AEX NEW CC PACK</h2>
 
-<p class="description">
-    ZA.AEX NEW CC PACK! <br><br>
-    You will get these:<br>
-    - cc bright<br>
-    - cc sunset<br>
-    - cc snowy<br>
-    - cc rise<br><br>
-    THESE ARE MY MOST USED CC'S IN MY VIDEOS.<br>
-    IF THE BRIGHTNESS IS TOO BRIGHT, ADJUST THE EXPOSURE.
-</p>
+        <p className="text-sm opacity-80 mb-4">
+          You will get these:
+          <br />– cc bright
+          <br />– cc sunset
+          <br />– cc snowy
+          <br />– cc rise
+          <br /><br />
+          THESE ARE MY MOST USED CC'S IN MY VIDEOS.
+          <br />
+          IF THE BRIGHTNESS IS TOO BRIGHT, ADJUST THE EXPOSURE.
+        </p>
 
-<a href="pack-view.html" class="green-btn">View</a>
-
-</body>
-</html>
+        <a
+          href="/packs/zaaex"
+          className="bg-green-600 px-4 py-2 rounded-md font-semibold hover:bg-green-700"
+        >
+          View
+        </a>
+      </div>
+    </div>
+  );
+}
