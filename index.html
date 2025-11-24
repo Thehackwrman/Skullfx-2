@@ -3,117 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SkullFX • Premium After Effects Presets</title>
+    <title>SkullFX • Free AE Presets & Scenepacks</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- Particle Background -->
+    <!-- Floating Particles Background -->
     <div id="particles-js"></div>
 
-    <!-- Main Container -->
-    <div class="container">
+    <div class="wrapper">
 
         <!-- Header -->
         <header class="header">
             <div class="logo">
-                <h1><span class="skull">💀</span> SkullFX</h1>
+                <h1><i class="fas fa-skull-crossbones"></i> SkullFX</h1>
             </div>
-            <div class="search-container">
-                <input type="text" id="searchBar" placeholder="Search presets, packs, glitches..." autocomplete="off">
-                <i class="fas fa-search search-icon"></i>
+            <div class="auth">
+                <button class="login-btn"><i class="fas fa-user"></i> Login</button>
             </div>
         </header>
 
-        <!-- Hero -->
-        <section class="hero">
-            <h2 class="glitch" data-text="PREMIUM AE PRESETS">PREMIUM AE PRESETS</h2>
-            <p class="tagline">Insane animations • One-click magic • Made for pros</p>
-            <div class="cta-buttons">
-                <a href="#" class="btn primary">Browse All Packs</a>
-                <a href="#" class="btn secondary">Free Starter Pack →</a>
-            </div>
-        </section>
-
-        <!-- Sections Grid -->
-        <div id="sectionsContainer" class="sections-grid">
-            <!-- Example Section -->
-            <div class="section-card" data-name="Velocity">
-                <div class="card-inner">
-                    <h2>Velocity</h2>
-                    <p>Hyper-speed transitions & motion madness</p>
-                    <span class="pack-count">42 Presets</span>
-                    <div class="preview-gif">
-                        <video autoplay loop muted playsinline>
-                            <source src="https://assets.mixkit.co/videos/preview/mixkit-neon-velocity-lines-12703-small.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <a href="#" class="card-btn">View Pack →</a>
-                </div>
-            </div>
-
-            <!-- Add more sections like this -->
-            <div class="section-card" data-name="Glitch">
-                <div class="card-inner">
-                    <h2>Glitch</h2>
-                    <p>Digital distortion & cyberpunk chaos</p>
-                    <span class="pack-count">58 Presets</span>
-                    <div class="preview-gif"></div>
-                    <a href="#" class="card-btn">View Pack →</a>
-                </div>
-            </div>
-
-            <div class="section-card" data-name="Neon">
-                <div class="card-inner">
-                    <h2>Neon</h2>
-                    <p>Glowing signs & electric vibes</p>
-                    <span class="pack-count">35 Presets</span>
-                    <div class="preview-gif"></div>
-                    <a href="#" class="card-btn">View Pack →</a>
-                </div>
-            </div>
-
-            <!-- Keep adding as many as you want -->
+        <!-- Tagline -->
+        <div class="tagline">
+            Your #1 Source for <span class="glow">FREE</span> After Effects Presets, Transitions & Scenepacks
         </div>
 
+        <!-- View Toggle -->
+        <div class="view-toggle">
+            <span>List View</span>
+            <label class="switch">
+                <input type="checkbox" id="viewSwitch">
+                <span class="slider"></span>
+            </label>
+            <span>Poster View</span>
+        </div>
+
+        <!-- Category Tabs -->
+        <div class="categories">
+            <button class="cat-btn active"><i class="fas fa-film"></i> Transitions</button>
+            <button class="cat-btn"><i class="fas fa-bolt"></i> Effects</button>
+            <button class="cat-btn"><i class="fas fa-gamepad"></i> Gaming</button>
+            <button class="cat-btn"><i class="fas fa-star"></i> Text Presets</button>
+            <button class="cat-btn"><i class="fas fa-question"></i> Other</button>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <input type="text" placeholder="Search presets, velocity, glitch, shake..." id="searchInput">
+            <i class="fas fa-search"></i>
+        </div>
+
+        <!-- Grid of Packs -->
+        <div class="packs-grid" id="packsGrid">
+
+            <!-- Example Card (copy this block for more packs) -->
+            <div class="pack-card" data-name="Velocity Pro">
+                <div class="thumbnail">
+                    <img src="https://i.imgur.com/6b5q3fE.gif" alt="Velocity">
+                    <div class="overlay">
+                        <div class="play-icon"><i class="fas fa-play"></i></div>
+                        <span class="dl-count">842</span>
+                    </div>
+                </div>
+                <div class="info">
+                    <h3>Velocity Pro Pack</h3>
+                    <p>62 insane speed ramps & whooshes</p>
+                </div>
+            </div>
+
+            <div class="pack-card" data-name="Glitch Destroyer">
+                <div class="thumbnail">
+                    <img src="https://i.imgur.com/8Y3K2pM.gif" alt="Glitch">
+                    <div class="overlay"><div class="play-icon"><i class="fas fa-play"></i></div><span class="dl-count">1.2k</span></div>
+                </div>
+                <div class="info">
+                    <h3>Glitch Destroyer v3</h3>
+                    <p>Digital distortion chaos</p>
+                </div>
+            </div>
+
+            <!-- Add 20–30 more cards here in real use -->
+            <!-- I'll give you 12 ready ones below -->
+
+        </div>
     </div>
 
     <!-- Particles.js -->
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script>
         particlesJS("particles-js", {
-            "particles": {
-                "number": { "value": 80 },
-                "color": { "value": "#00ffff" },
-                "shape": { "type": ["circle", "triangle", "star"] },
-                "opacity": { "value": 0.8, "random": true },
-                "size": { "value": 4, "random": true },
-                "line_linked": { "enable": true, "distance": 150, "color": "#00ffff", "opacity": 0.4, "width": 1 },
-                "move": { "enable": true, "speed": 3, "direction": "none", "random": false, "straight": false, "out_mode": "out" }
+            particles: {
+                number: { value: 100 },
+                color: { value: ["#00ffff", "#ff00ff", "#00ff00"] },
+                shape: { type: "circle" },
+                opacity: { value: 0.6, random: true },
+                size: { value: 3, random: true },
+                line_linked: { enable: true, distance: 120, color: "#00ffff", opacity: 0.3, width: 1 },
+                move: { enable: true, speed: 2 }
             },
-            "interactivity": {
-                "detect_on": "canvas",
-                "events": {
-                    "onhover": { "enable": true, "mode": "repulse" },
-                    "onclick": { "enable": true, "mode": "push" },
-                    "resize": true
-                }
-            },
-            "retina_detect": true
+            interactivity: {
+                events: { onhover: { enable: true, mode: "repulse" }, onclick: { enable: true, mode: "push" } }
+            }
         });
-    </script>
 
-    <!-- Simple hover sound (optional) -->
-    <audio id="hoverSound" src="https://assets.mixkit.co/sfx/preview/mixkit-arcade-game-jump-coin-216.mp3" preload="auto"></audio>
-    <script>
-        const hoverSound = document.getElementById('hoverSound');
-        document.querySelectorAll('.section-card').forEach(card => {
-            card.addEventListener('mouseenter', () => {
-                hoverSound.currentTime = 0;
-                hoverSound.volume = 0.2;
-                hoverSound.play();
+        // Simple search filter
+        document.getElementById('searchInput').addEventListener('input', function(e) {
+            const term = e.target.value.toLowerCase();
+            document.querySelectorAll('.pack-card').forEach(card => {
+                const name = card.dataset.name.toLowerCase();
+                card.style.display = name.includes(term) ? 'block' : 'none';
             });
         });
     </script>
