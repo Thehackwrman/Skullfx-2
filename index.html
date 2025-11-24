@@ -1,44 +1,121 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>SkullFX AE Presets</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkullFX • Premium After Effects Presets</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-    <header>
-        <h1>SkullFX AE Presets</h1>
-        <input type="text" id="searchBar" placeholder="Search presets, sections or packs...">
-    </header>
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
 
-    <div id="sectionsContainer">
+    <!-- Main Container -->
+    <div class="container">
 
-        <div class="section" data-name="Velocity">
-            <h2>Velocity</h2>
-        </div>
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <h1><span class="skull">💀</span> SkullFX</h1>
+            </div>
+            <div class="search-container">
+                <input type="text" id="searchBar" placeholder="Search presets, packs, glitches..." autocomplete="off">
+                <i class="fas fa-search search-icon"></i>
+            </div>
+        </header>
 
-        <div class="section" data-name="Jugg">
-            <h2>Jugg</h2>
-        </div>
+        <!-- Hero -->
+        <section class="hero">
+            <h2 class="glitch" data-text="PREMIUM AE PRESETS">PREMIUM AE PRESETS</h2>
+            <p class="tagline">Insane animations • One-click magic • Made for pros</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn primary">Browse All Packs</a>
+                <a href="#" class="btn secondary">Free Starter Pack →</a>
+            </div>
+        </section>
 
-        <div class="section" data-name="Shake">
-            <h2>Shake</h2>
-        </div>
+        <!-- Sections Grid -->
+        <div id="sectionsContainer" class="sections-grid">
+            <!-- Example Section -->
+            <div class="section-card" data-name="Velocity">
+                <div class="card-inner">
+                    <h2>Velocity</h2>
+                    <p>Hyper-speed transitions & motion madness</p>
+                    <span class="pack-count">42 Presets</span>
+                    <div class="preview-gif">
+                        <video autoplay loop muted playsinline>
+                            <source src="https://assets.mixkit.co/videos/preview/mixkit-neon-velocity-lines-12703-small.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <a href="#" class="card-btn">View Pack →</a>
+                </div>
+            </div>
 
-        <div class="section" data-name="Glow">
-            <h2>Glow</h2>
-        </div>
+            <!-- Add more sections like this -->
+            <div class="section-card" data-name="Glitch">
+                <div class="card-inner">
+                    <h2>Glitch</h2>
+                    <p>Digital distortion & cyberpunk chaos</p>
+                    <span class="pack-count">58 Presets</span>
+                    <div class="preview-gif"></div>
+                    <a href="#" class="card-btn">View Pack →</a>
+                </div>
+            </div>
 
-        <div class="section" data-name="Text Animation">
-            <h2>Text Animation</h2>
-        </div>
+            <div class="section-card" data-name="Neon">
+                <div class="card-inner">
+                    <h2>Neon</h2>
+                    <p>Glowing signs & electric vibes</p>
+                    <span class="pack-count">35 Presets</span>
+                    <div class="preview-gif"></div>
+                    <a href="#" class="card-btn">View Pack →</a>
+                </div>
+            </div>
 
-        <div class="section" data-name="Packs">
-            <h2>Packs</h2>
+            <!-- Keep adding as many as you want -->
         </div>
 
     </div>
 
-    <script src="script.js"></script>
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": { "value": 80 },
+                "color": { "value": "#00ffff" },
+                "shape": { "type": ["circle", "triangle", "star"] },
+                "opacity": { "value": 0.8, "random": true },
+                "size": { "value": 4, "random": true },
+                "line_linked": { "enable": true, "distance": 150, "color": "#00ffff", "opacity": 0.4, "width": 1 },
+                "move": { "enable": true, "speed": 3, "direction": "none", "random": false, "straight": false, "out_mode": "out" }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": { "enable": true, "mode": "repulse" },
+                    "onclick": { "enable": true, "mode": "push" },
+                    "resize": true
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
+
+    <!-- Simple hover sound (optional) -->
+    <audio id="hoverSound" src="https://assets.mixkit.co/sfx/preview/mixkit-arcade-game-jump-coin-216.mp3" preload="auto"></audio>
+    <script>
+        const hoverSound = document.getElementById('hoverSound');
+        document.querySelectorAll('.section-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                hoverSound.currentTime = 0;
+                hoverSound.volume = 0.2;
+                hoverSound.play();
+            });
+        });
+    </script>
 </body>
 </html>
